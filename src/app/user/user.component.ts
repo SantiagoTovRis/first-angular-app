@@ -1,10 +1,10 @@
-import { Component, EventEmitter, Input, Output, output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-user',
   standalone: true,
   templateUrl: './user.component.html',
-  styleUrl: './user.component.css',
+  styleUrl: './user.component.css'
 })
 export class UserComponent {
   @Input({ required: true }) id!: string;
@@ -18,6 +18,6 @@ export class UserComponent {
   }
 
   onSelectUser() {
-    this.select.emit(this.id);
+    this.select.emit(this.name);
   }
 }
